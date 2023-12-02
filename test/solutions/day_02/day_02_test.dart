@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 import '../../test_helper/test_input.dart';
 
 void main() {
-  test("should resolve first part correctly", () {
+  test("should resolve first part correctly", () async {
     final input = TestInput([
       'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green',
       'Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue',
@@ -14,12 +14,12 @@ void main() {
     ]);
     final solution = DayTwo();
 
-    final result = solution.firstPart(input);
+    final result = await solution.firstPart(input);
 
-    expect(result, 'unresolved');
+    expect(result, '8');
   });
 
-  test("should resolve second part correctly", () {
+  test("should resolve second part correctly", () async {
     final input = TestInput([
       'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green',
       'Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue',
@@ -29,8 +29,8 @@ void main() {
     ]);
     final solution = DayTwo();
 
-    final result = solution.secondPart(input);
+    final result = await solution.secondPart(input);
 
-    expect(result, 'unresolved');
+    expect(result, '2286');
   });
 }
