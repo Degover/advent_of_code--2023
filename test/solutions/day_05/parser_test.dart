@@ -35,6 +35,14 @@ void main() {
     expect(result.seeds, orderedEquals([79, 14, 55, 13]));
     expect(result.maps, hasLength(2));
 
+    expect(result.seedRanges, hasLength(2));
+    expect(result.seedRanges[0].start, equals(79));
+    expect(result.seedRanges[0].end, equals(92));
+    expect(result.seedRanges[0].length, equals(14));
+    expect(result.seedRanges[1].start, equals(55));
+    expect(result.seedRanges[1].end, equals(67));
+    expect(result.seedRanges[1].length, equals(13));
+
     expect(result.maps[0].sourceCategory, equals('seed'));
     expect(result.maps[0].destinationCategory, equals('soil'));
     expect(result.maps[0].ranges, hasLength(2));

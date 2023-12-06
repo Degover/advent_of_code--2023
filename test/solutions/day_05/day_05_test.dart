@@ -53,6 +53,6 @@ void main() {
 
     final result = await solution.secondPart(input);
 
-    expect(result, 'unresolved');
+    expect(result, '46');
   });
 }

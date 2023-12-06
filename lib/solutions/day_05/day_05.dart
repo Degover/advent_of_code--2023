@@ -21,6 +21,19 @@ class DayFive implements Solution {
 
   @override
   Future<String> secondPart(Input input) async {
-    return 'unresolved';
+    final parser = Parser();
+    final mapper = Mapper();
+
+    final almanac = await parser.parseAlmanac(input);
+
+    final locationRanges = almanac.seedRanges
+        .map((seedRange) => mapper.mapAllRanges(seedRange, almanac.maps))
+        .expand((range) => range);
+
+    return locationRanges
+        .reduce(
+            (value, element) => value.start < element.start ? value : element)
+        .start
+        .toString();
   }
 }
