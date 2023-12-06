@@ -10,9 +10,9 @@ void main() {
 
     final result = parser.parseMapRange(inputLine);
 
-    expect(result.sourceStart, equals(53));
-    expect(result.destinationStart, equals(49));
-    expect(result.length, equals(8));
+    expect(result.sourceRange.start, equals(53));
+    expect(result.sourceRange.length, equals(8));
+    expect(result.destinyRange.start, equals(49));
   });
 
   test('should parse almanac correctly', () async {

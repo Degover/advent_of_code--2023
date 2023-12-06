@@ -1,9 +1,9 @@
 import 'package:advent_of_code/solutions/day_05/model/almanac_map_range.dart';
 
 class AlmanacMap {
-  String sourceCategory;
-  String destinationCategory;
-  List<AlmanacMapRange> ranges;
+  final String sourceCategory;
+  final String destinationCategory;
+  final List<AlmanacMapRange> ranges;
 
   AlmanacMap(
       {required this.sourceCategory,
